@@ -36,7 +36,7 @@ public class GuessNumberGame {
         hiddenNumber = generateHiddenNumber();
     }
 
-    //Function for generate the hidden number to guess
+    //Function for generating the hidden number to guess
     public String generateHiddenNumber() {
         List<Integer> tmpNumber =  IntStream.range(0, 10).boxed().collect(Collectors.toList());
         Collections.shuffle(tmpNumber);

@@ -46,7 +46,7 @@ public class GuessNumberGameAI {
         for (String candidateGuess : candidateNumbers) {
             boolean existCandidateGuess = true;
             //We search through the hashMap searching for a candidateGuess that
-            //matches his scoreGuess with the ones from previous guesses. The first we find is going to be our next guessNumber.
+            //matches his scoreGuess with the ones from previous guesses. The first we find is going to be our next number to guess.
             for (Map.Entry<String, ScoreCounter> entry : filters.entrySet()) {
                 String guess = entry.getKey();
                 ScoreCounter guessScore = entry.getValue();
@@ -55,7 +55,7 @@ public class GuessNumberGameAI {
                     break;
                 }
             }
-            //We guess and save the number in order to use it for searching next candidates guess.
+            //We return the candidateGuess that will be the next guess.
             if (existCandidateGuess) {
                 return candidateGuess;
             }
