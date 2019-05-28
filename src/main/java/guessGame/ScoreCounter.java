@@ -9,6 +9,16 @@ public class ScoreCounter {
         this.regularMatches = regularMatches;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+        ScoreCounter other = (ScoreCounter) obj;
+        return goodMatches == other.goodMatches && regularMatches == other.regularMatches;
+    }
+
     //Format for the score of the guess.
     @Override
     public String toString() {
